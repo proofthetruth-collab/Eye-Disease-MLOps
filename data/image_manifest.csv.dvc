@@ -1,0 +1,5 @@
+outs:
+- md5: cada2cb609ec7d46863cf14b17565946
+  size: 11798
+  hash: md5
+  path: image_manifest.csv

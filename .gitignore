@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Metrics / outputs
+metrics/
+reports/
+logs/
+outputs/
+
+# Model artifacts
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.pkl
+
+# Temp files
+*.tmp
+
+# MLflow local tracking
+mlruns/

@@ -1,0 +1,15 @@
+# Data settings
+data_manifest: "data/image_manifest.csv"
+image_dir: "data/raw/AMDNet23 Dataset/train"
+test_size: 0.2
+random_state: 42
+
+# Training hyperparameters
+model_type: "cnn" # or custom architecture / transfer learning model
+batch_size: 32
+epochs: 10  
+learning_rate: 0.001
+
+# Paths for outputs and artifacts
+model_output_path: "models/best_model.pt"
+metrics_output_path: "metrics/scores.json"
