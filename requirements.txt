@@ -1,0 +1,8 @@
+joblib
+mlflow
+numpy
+opencv-python-headless
+pandas
+PyYAML
+scikit-learn
+pytest
