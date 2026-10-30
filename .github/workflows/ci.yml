@@ -24,7 +24,7 @@ jobs:
       - name: Run pytest suite
         run: pytest tests/
 
-train: 
+  train: 
     needs: test
     runs-on: ubuntu-latest
     steps:
