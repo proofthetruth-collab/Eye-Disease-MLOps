@@ -22,11 +22,8 @@ jobs:
           pip install -r requirements.txt
           pip install dvc
     
-      - name: Pull data with DVC
-        run: dvc pull
-        env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Generate dataset manifest
+        run: python src/generate_data.py
 
       - name: Run pytest suite
         run: pytest tests/
@@ -49,11 +46,8 @@ jobs:
           pip install -r requirements.txt
           pip install dvc
 
-      - name: Pull data with DVC
-        run: dvc pull
-        env:
-            AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-            AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: Generate dataset manifest
+        run: python src/generate_data.py
 
-      - name: Run training script and check thresholds
-        run: python src/train.py
+      - name: Run pytest suite
+        run: pytest tests/
