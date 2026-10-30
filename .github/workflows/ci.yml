@@ -23,7 +23,7 @@ jobs:
           pip install dvc
     
       - name: Generate dataset manifest
-        run: python src/generate_data.py
+        run: python generate_data.py
 
       - name: Run pytest suite
         run: pytest tests/
@@ -47,7 +47,7 @@ jobs:
           pip install dvc
 
       - name: Generate dataset manifest
-        run: python src/generate_data.py
+        run: pythongenerate_data.py
 
       - name: Run pytest suite
         run: pytest tests/
