@@ -33,3 +33,4 @@ models/*.pkl
 
 # MLflow local tracking
 mlruns/
+mlflow.db

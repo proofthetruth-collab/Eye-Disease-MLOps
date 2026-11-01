@@ -1,0 +1,8 @@
+[core]
+    autostage = true
+    remote = myremote
+['remote "myremote"']
+    url = s3://trevor-s3-lab-7291-342004455550-us-east-1-an/dvc-store
+    region = us-east-1
+    
+    endpointurl = https://s3.us-east-1.amazonaws.com
