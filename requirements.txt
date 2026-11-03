@@ -6,3 +6,4 @@ pandas
 PyYAML
 scikit-learn
 pytest
+dvc[s3]
