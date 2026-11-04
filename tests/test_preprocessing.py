@@ -41,3 +41,15 @@ def test_data_manifest_loads_successfully():
     assert not df.empty, "Manifest file is empty."
     assert "image_name" in df.columns, "Manifest file is missing 'image_name' column."
     assert "label" in df.columns, "Manifest file is missing 'label' column."
+
+def test_preprocessing_does_not_mutate_original():
+    """Verify that preprocessing functions do not modify the original DataFrame in place."""
+    df = pd.DataFrame({'image_name': ['img1.jpg', 'img2.jpg', None], 'label': [0, 1, 0]})
+    df_copy = df.copy()
+    _ = handle_missing_values(df)
+    pd.testing.assert_frame_equal(df, df_copy)
+
+def test_preprocessing_raises_error_on_invalid_input():
+    """Verify that appropriate errors are raised when invalid data types or empty inputs are passed."""
+    with pytest.raises((ValueError, TypeError, AttributeError)):
+        handle_missing_values(None)
