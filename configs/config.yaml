@@ -11,5 +11,5 @@ epochs: 10
 learning_rate: 0.001
 
 # Paths for outputs and artifacts
-model_output_path: "models/best_model.pt"
+model_output_path: "models/model.joblib"
 metrics_output_path: "metrics/scores.json"
